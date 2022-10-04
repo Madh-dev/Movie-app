@@ -8,7 +8,7 @@ const MovieList =()=> {
     useEffect(() => {
      
     
-        const key ="2c2ff111934687367af0997b76d1507c";
+        const key ="b3bf6c1deaf9eb5aa767b4098d9ea77e";
 
     const getmoviedata = async() =>{
         const res = await axios.get(`https://api.themoviedb.org/3/trending/all/day?api_key=${key}`);
@@ -16,19 +16,19 @@ const MovieList =()=> {
         console.log(res.data.results);
     };
     getmoviedata();
-
+    
+        
 
     }, []);
-    
 
-    
 
+//    onClick={cooler()}
     return (
         <div>
             <div className="container">
                 <div className="row">
                     {items.map((item) =>(
-                        <MovieItems key={item.id} item = {item} />
+                        <MovieItems item = {item} />
                     ))}
                     
 
